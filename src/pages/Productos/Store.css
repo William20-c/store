@@ -1,0 +1,13 @@
+.paginator {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    gap: 15px; /* Espacio entre elementos */
+    margin: 20px 0; /* Margen superior e inferior */
+  }
+  
+  .page-info {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333; /* Color del texto */
+  }

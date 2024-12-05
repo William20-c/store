@@ -1,5 +1,4 @@
 import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import './Categorias.css';
 
 const Categorias: React.FC = () => {
@@ -11,7 +10,6 @@ const Categorias: React.FC = () => {
             <IonTitle size="large">Categorias</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
       </IonContent>
     </IonPage>
   );

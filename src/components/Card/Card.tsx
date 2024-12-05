@@ -9,11 +9,11 @@ import {
     IonButton
   } from "@ionic/react";
   import React, { useEffect } from "react";
-  import useProduct, {Product, Category} from "../store/useProduct";
+  import useProduct, {Product, Category} from "../../store/useProduct";
   import './Card.css';
   import { useHistory } from "react-router";
-  import { useWishlistStore } from "../store/useWishlistStore";
-  import { useUserStore } from "../store/useUserStore";
+  import { useWishlistStore } from "../../store/useWishlistStore";
+  import { useUserStore } from "../../store/useUserStore";
   import { heartOutline, heart } from 'ionicons/icons';
 
   export const Card: React.FC<Product> = ({id,title,price,description,images,creationAt,updatedAt,category} : Product) => {

@@ -32,7 +32,7 @@ import '@ionic/react/css/palettes/dark.system.css';
 /* Theme variables */
 import './theme/variables.css';
 
-import { Tabs } from './components/Tabs';
+import { Tabs } from './components/Tabs/Tabs';
 
 setupIonicReact();
 

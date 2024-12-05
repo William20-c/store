@@ -8,14 +8,14 @@ import {
 } from "@ionic/react";
 import React, { useEffect, useState } from "react";
 import { Redirect, Route } from "react-router";
-import { Store } from "../pages/Store";
-import Favoritos from "../pages/Favoritos";
+import { Store } from "../../pages/Productos/Store";
+import Favoritos from "../../pages/Productos/Favoritos";
 import { heart, logIn, person, pricetags } from "ionicons/icons";
 import { IonReactRouter } from "@ionic/react-router";
-import { Login } from "../pages/Auth/Login";
-import Perfil from "../pages/Perfil";
-import { Detalle } from "../pages/Detalle";
-import { useUserStore } from "../store/useUserStore";
+import { Login } from "../../pages/Auth/Login";
+import Perfil from "../../pages/Perfil";
+import { Detalle } from "../../pages/Productos/Detalle";
+import { useUserStore } from "../../store/useUserStore";
 
 export const Tabs: React.FC = () => {
   const { isLoading, setLoading, user } = useUserStore();

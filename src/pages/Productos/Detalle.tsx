@@ -14,11 +14,11 @@ import {
   IonImg,
   IonIcon
 } from '@ionic/react';
-import useProduct, { Category } from '../store/useProduct';
+import useProduct, { Category } from '../../store/useProduct';
 import { useHistory } from "react-router";
 import { heartOutline, heart } from 'ionicons/icons';
-import { useWishlistStore } from "../store/useWishlistStore";
-import { useUserStore } from "../store/useUserStore";
+import { useWishlistStore } from "../../store/useWishlistStore";
+import { useUserStore } from "../../store/useUserStore";
 
 export const Detalle: React.FC = () => {
     const { product } = useProduct();

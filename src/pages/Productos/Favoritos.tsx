@@ -11,11 +11,10 @@ import {
 } from "@ionic/react";
 import { filter, searchCircle } from "ionicons/icons";
 import React, { useEffect, useState } from "react";
-import "./Home.css";
-import {Product} from "../store/useProduct";
-import {Card} from "../components/Card";
-import { useWishlistStore } from "../store/useWishlistStore";
-import { useUserStore } from "../store/useUserStore";
+import {Product} from "../../store/useProduct";
+import {Card} from "../../components/Card/Card";
+import { useWishlistStore } from "../../store/useWishlistStore";
+import { useUserStore } from "../../store/useUserStore";
 
 const Favoritos: React.FC = () => {
   const { user } = useUserStore(); 
