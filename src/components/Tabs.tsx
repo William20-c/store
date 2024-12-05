@@ -6,19 +6,38 @@ import {
   IonTabButton,
   IonTabs,
 } from "@ionic/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Redirect, Route } from "react-router";
 import { Store } from "../pages/Store";
 import Favoritos from "../pages/Favoritos";
 import { heart, logIn, person, pricetags } from "ionicons/icons";
 import { IonReactRouter } from "@ionic/react-router";
-import {Login} from "../pages/Auth/Login";
+import { Login } from "../pages/Auth/Login";
 import Perfil from "../pages/Perfil";
 import { Detalle } from "../pages/Detalle";
 import { useUserStore } from "../store/useUserStore";
 
 export const Tabs: React.FC = () => {
-  const { user } = useUserStore();
+  const { isLoading, setLoading, user } = useUserStore();
+
+  useEffect(() => {
+    // Simula una verificación inicial (usualmente verificarías la persistencia aquí)
+    const checkUser = async () => {
+      try {
+        // Simula un pequeño retraso para cargar la persistencia
+        await new Promise((resolve) => setTimeout(resolve, 500));
+      } finally {
+        setLoading(false); // Finaliza la carga
+      }
+    };
+
+    checkUser();
+  }, [setLoading]);
+
+  // No renderizamos nada hasta que se haya cargado el estado del usuario
+  if (isLoading) {
+    return <div>Cargando...</div>; // O una pantalla de carga si lo prefieres
+  }
   return (
     <IonReactRouter>
       <IonTabs>
@@ -30,10 +49,10 @@ export const Tabs: React.FC = () => {
             <Detalle />
           </Route>
           <Route exact path="/favorites">
-            {user != null ? <Favoritos /> : <Redirect to="/login" />}
+            {user  ? <Favoritos /> : <Redirect to="/login" />}
           </Route>
           <Route exact path="/profile">
-            {user != null ? <Perfil /> : <Redirect to="/login" />}
+            {user  ? <Perfil /> : <Redirect to="/login" />}
           </Route>
           <Route exact path="/login">
             <Login />
