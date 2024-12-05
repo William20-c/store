@@ -1,0 +1,53 @@
+/* Estilo general de la página */
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Asegura que el contenedor se expanda en pantallas pequeñas */
+    margin: 0 auto;
+  }
+  
+  /* Título */
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Estilo de los items del formulario */
+  .form-item {
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo de los labels */
+  .input-label {
+    padding: 10px 0;
+  }
+  
+  /* Estilo del botón de login */
+  .login-btn {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  /* Estilo de los errores */
+  ion-text {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Estilo del toast */
+  ion-toast {
+    --background: #f8d7da;
+    --color: #721c24;
+  }

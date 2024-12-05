@@ -1,0 +1,18 @@
+.card__custom-title {
+    font-size: .90rem;
+  }
+  
+.card__custom-subtitle {
+    font-size: .80rem;
+}
+
+.card__custom-category{
+    margin-bottom: 10px;
+}
+
+.wishlist-btn {
+    position: absolute; /* El botón se posiciona de forma absoluta dentro del card */
+    top: 10px; /* Distancia desde la parte superior */
+    right: 10px; /* Distancia desde el borde derecho */
+    z-index: 10; /* Asegura que el botón esté encima de la imagen */
+  }
